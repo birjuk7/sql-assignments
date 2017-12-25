@@ -1,0 +1,19 @@
+1)select last_name,salary,(salary*3)'Dream Salary' from employees;
+2)
+3)select last_name,hire_date,dayofweek(hire_date)DAY from employees group by DAY,hire_date,last_name;
+4)select last_name,IFNULL(commission_pct,'NO COMMISSION')'COMM' from employees;
+5)mysql> select job_id, 
+    -> (case
+    -> when job_id='AD_PRES' then 'A'
+    -> when job_id='ST_MAN' then 'B'
+    -> when job_id='IT_PROG' then 'C'
+    -> when job_id='SA_REP' then 'D'
+    -> when job_id='ST_CLERK' then 'E'
+    -> else '0'
+    -> end)grade from employees;
+6)mysql> select truncate(max(salary),0)MAXIMUM,truncate(min(salary),0)MINIMUM,Truncate(sum(salary),0)SUM,Truncate(avg(salary),0)AVERAGE from employees;
+7)select job_id,truncate(max(salary),0)MAXIMUM,truncate(min(salary),0)MINIMUM,Truncate(sum(salary),0)SUM,Truncate(avg(salary),0)AVERAGE from employees group by job_id;
+8) select job_id,count(*) from employees group by job_id;
+9)select manager_id,min(salary) from employees where manager_id is NOT NULL group by manager_id having min(salary)>6000 order by min(salary) desc;
+
+

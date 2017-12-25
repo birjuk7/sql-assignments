@@ -1,0 +1,29 @@
+1. select employee_id, last_name, job_id, hire_date AS 'STARTDATE' from employees;
+
+2. select distinct(job_id) from employees;
+
+3. select last_name, job_id, hire_date 'STARTDATE' from employees where last_name = 'Matos' OR last_name = 'Taylor' order by hire_date;
+
+4. select * from employees where last_name like '__a%';
+
+5. select last_name, hire_date from employees where year(hire_date) = 1994;
+
+6. select last_name from employees where last_name like '%a%' AND last_name like '%e%';
+
+7. NOT GIVEN IN ASSIGNMENT
+
+8. select last_name, department_id from employees where department_id = 20 OR department_id = 50 order by last_name asc;
+
+9. select curdate() 'Date';
+
+10. select employee_id, last_name, salary, salary*1.155 AS 'New Salary', (salary*1.155-salary) AS 'Increase' from employees;
+
+11. select concat(upper(substr(last_name,1,1)),substr(last_name,2,char_length(last_name))) 'Last Name', char_length(last_name) 'Length' from employees where last_name like 'J%' or last_name like 'A%' or last_name like 'M%' order by last_name asc;
+
+12. select last_name, hire_date, round((period_diff(extract(year_month from curdate()),extract(year_month from hire_date)))/12) AS 'MONTHS WORKED' from employees;
+
+13. select last_name, lpad(salary,15,'$') AS 'Salary' from employees;
+
+14. select substr(last_name,1,8), lpad(salary,8,'$') from employees;
+
+
