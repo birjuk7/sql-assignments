@@ -1,0 +1,8 @@
+MySQL Aggregate function commands
+
+Command	Description
+SELECT COUNT(t1_id) FROM table1 WHERE t1_id = 2;	COUNT Function
+SELECT MIN(t3) FROM table2;				MIN function
+SELECT MAX(t3) FROM table2;				MAX function
+SELECT SUM(t4) FROM table3;				SUM function
+SELECT AVG(t4) FROM table3;				AVG function
