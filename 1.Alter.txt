@@ -6,7 +6,7 @@ DROP TABLE sample_table;							                                  DROP TABLE synt
 RENAME TABLE current_table_name TO new_table_name;				              RENAME COMMAND syntax
 ALTER TABLE table1 CHANGE COLUMN t1_names t1name char(250) NOT NULL;		CHANGE KEYWORD
 ALTER TABLE table1MODIFY t1name char(50) NOT NULL;				              MODIFY KEYWORD
-ALTER TABLE table1 ADD t4 date NULL AFTER t3;					                  AFTER KEYWORD.
+ALTER TABLE table1 ADD t4 date NULL AFTER t3;					                  AFTER KEYWORD
 
 
 
